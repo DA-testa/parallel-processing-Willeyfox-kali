@@ -4,10 +4,7 @@ def parallel_processing(n, m, data):
     output = []
     # TODO: write the function for simulating parallel tasks, 
     # create the output pairs
-    tasks = []
-    for i in range(m):
-        t = (data[i], i)
-        tasks.append(t)
+    tasks = [(data[i], i) for i in range(m)]
     finish = [0] * n
     for i in tasks:
         next = 0
