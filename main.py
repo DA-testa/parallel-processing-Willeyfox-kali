@@ -9,7 +9,7 @@ def parallel_processing(n, m, data):
     for i in tasks:
         next = finish.index(min(finish))
         output.append((next, finish[next]))
-        finish = [next]
+        finish[next] = finish[next]+i[0]
     return output
 
 def main():
